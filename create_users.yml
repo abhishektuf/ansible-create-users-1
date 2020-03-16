@@ -14,7 +14,7 @@
   - include_vars: users.yml
 
   - name: Add users | create users, shell, home dirs
-    user: name={{ item.username }} shell=/bin/bash createhome=yes comment='create with ansible'
+    user: name={{ item.username }} shell=/bin/bash createhome=yes comment='created with ansible'
     with_items: '{{users}}'
 
   - name: Setup | authorized key upload
@@ -30,5 +30,5 @@
       line='{{ item.username }} ALL=(ALL) NOPASSWD: ALL'
       regexp='^{{ item.username }} .*'
       state=present"
-    when: '{{ item.use_sudo }} == True'
+    when: '[ item.use_sudo ] == True'
     with_items: '{{users}}'

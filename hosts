@@ -1,2 +1,7 @@
 [servers]
-172.16.22.100
+centos8-1 ansible_host=192.168.100.6 ansible_user=root ansible_ssh_pass=india123 ansible_sudo_pass=india123
+centos8-2 ansible_host=192.168.100.7 ansible_user=root ansible_ssh_pass=india123 ansible_sudo_pass=india123
+#db_and_web_server1 ansible_host=192.168.57.5 ansible_user=osboxes ansible_ssh_pass=osboxes.org
+#db_and_web_server1 ansible_host=192.168.57.6 ansible_user=osboxes ansible_ssh_pass=osboxes.org
+#db_and_web_server1 ansible_host=192.168.57.5 ansible_user=osboxes ansible_ssh_pass=osboxes.org
+#db_and_web_server1 ansible_host=192.168.57.6 ansible_user=osboxes ansible_ssh_pass=osboxes.org
