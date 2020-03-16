@@ -30,5 +30,5 @@
       line='{{ item.username }} ALL=(ALL) NOPASSWD: ALL'
       regexp='^{{ item.username }} .*'
       state=present"
-    when: '{{ item.use_sudo }} == True'
+    when: '[ item.use_sudo ] == True'
     with_items: '{{users}}'
