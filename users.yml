@@ -1,7 +1,7 @@
 ---
 users:
-  - username: maruna
+  - username: amit
     use_sudo: no
 
-  - username: jaroslav
+  - username: sanjeev
     use_sudo: yes
