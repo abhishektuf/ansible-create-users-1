@@ -22,7 +22,6 @@
     user: name={{ item.username }} shell=/bin/bash groups=orange_sudo createhome=yes comment='created with ansible'
     with_items: '{{users}}'
 
-<<<<<<< HEAD
   - name: sudoers | update sudoers file and validate
     lineinfile:
       path: /etc/sudoers
@@ -31,7 +30,6 @@
       regexp: '^%orange_sudo'
       state: present
       validate: /usr/sbin/visudo -cf %s
-=======
   - name: Setup | authorized key upload
     authorized_key: user={{ item.username }}
       key="{{ lookup('file', 'pub_keys/{{ item.username }}.pub') }}"
@@ -47,4 +45,3 @@
       state=present"
     when: '[ item.use_sudo ] == True'
     with_items: '{{users}}'
->>>>>>> 4a5da42cfc3eaa3a2ae2cc254e426702f93193ee
